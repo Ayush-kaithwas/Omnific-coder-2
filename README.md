@@ -5,7 +5,8 @@
 # To Use This website
 * Download the Zip file
 * Extract Zip to desired folder 
-* click on index.html and you can see the wesite
+* Open cmd and type "cd" then give the path of the "main.py" file inside folder("Omnific-coder-2")
+* Then type -> "python main.py"
 
 ### Do not delete any file or folder otherwise it may not work properly
 

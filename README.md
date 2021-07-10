@@ -2,7 +2,14 @@
 * This is a Fully Responsive website made using html, css,javascript and Flask
 * You can use and modify this code to make your own responsive website 
 
+
 # To Use This website
+
+* Install Flask, open cmd and type
+
+        pip install flask 
+
+
 * Download the Zip file
 * Extract Zip to desired folder 
 * Open cmd and type "cd" then give the path of the "main.py" file inside folder("Omnific-coder-2")

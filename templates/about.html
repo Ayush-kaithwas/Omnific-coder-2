@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+    /* --------------------------------------------------About US Page------------------------------------------- */
+    .sub-header {
+        height: 80vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('/static/assets/images/about.jpg');
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+    }
+
+    .sub-header h1 {
+        margin-top: 180px;
+    }
+
+    .about-us {
+        width: 80%;
+        margin: auto;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .about-col {
+        flex-basis: 48%;
+        padding: 30px 2px;
+
+    }
+
+    .about-col img {
+        width: 65%;
+        margin-left: 20%;
+    }
+
+    .about-col h1 {
+        padding-top: 0;
+    }
+
+    .about-col p {
+        padding: 15px 0 25px;
+    }
+
+    .red-btn {
+        border: 1px solid #187dff;
+        background: transparent;
+        color: #187dff;
+    }
+    .hero-btn:hover{
+        border: 1px solid #187dff;
+    }
+
+    .red-btn:hover {
+        color: #fff;
+    }
+
+    @media(max-width:700px) {
+        .row {
+            flex-direction: column-reverse;
+        }
+
+        .sub-header h1 {
+            margin-top: 175px;
+        }
+        .about-us{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        h1 {
+            font-size: 35px;
+        }
+        .about-col{
+            padding: 0;
+        }
+    }
+</style>
+
+
+<!-- -------------------------------------------------About Content  -->
+<h1>About Me</h1>
+</section>
+
+<!---------------------------about us content----------------------->
+
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>Talk Is Cheap. Show Me The Code</h1>
+            <p>Welcome to Omnific,One of the best platform to learn coding skills. I'm dedicated to give you
+                the very best of coding knowledge, with a focus on Basics, Secrets,
+                and how to avoid mistakes.<br>
+
+
+                Founded in 2020 by Ayush, Omnific has come a long way from its beginnings in 2020. so
+                that Omnific can offer you the World's most advanced
+                Coding Techniques.<br>
+
+
+                I hope you will enjoy my Courses as much as I enjoy offering them to you. If you have
+                any questions or comments, please don't hesitate to contact me.<br>
+
+
+                Sincerely,<br>
+
+                Ayush</p>
+            <a href="/course" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="{{url_for('static', filename = 'assets/images/favicon.png')}}">
+        </div>
+    </div>
+
+
+
+</section>
+
+{% endblock %}

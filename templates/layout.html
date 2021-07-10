@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnific Coder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link rel="icon" href="{{url_for('static', filename = 'assets/images/favicon.png')}}" sizes="16x16"
+        type="image/gif" />
+    <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet" />
+
+</head>
+
+<body>
+    <section class="sub-header header">
+        <nav>
+            <a href="index.html"><img src="{{url_for('static', filename = 'assets/images/Logo1.png')}}" alt="logo"></a>
+            <div class="nav-link" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/course">COURSE</a></li>
+                    <li><a href="/blog">BLOG</a></li>
+                    <li><a href="/login">ADMIN</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        {% block content %} {% endblock %}
+
+
+        <!----------------Footer--------------->
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>Omnific Coder is my attempt to teach coding basics to those who wants to learn coding<br>
+                I offer free courses with great explanation.</p>
+            <div class="icons">
+                <a href="https://github.com/Ayush-kaithwas" target="blank"><i class="fa fa-github"></i></a>
+                <a href="https://0mnific.blogspot.com/" target="blank"><i class="fa fa-user"></i></a>
+                <a href="https://www.instagram.com/omni_fic/" target="blank"><i class="fa fa-instagram"></i></a>
+            </div>
+            <p>Made By Omnific </p>
+        </section>
+
+
+
+        <!-- JavaScript For Toggle Menu -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    .hero-btn:hover {
+        border: 1px solid #187dff;
+    }
+</style>
+<div class="text-box">
+    <h1>Omnific Coder</h1>
+    <p>"Any fool can write code that a computer can understand. Good programmers write code that humans can
+        understand"<br>Want To Learn New Things? Don't Worry I have got you covered.<br> Browse Courses and find
+        the best course for you.</p>
+
+    <a href="/course" class="hero-btn">Visit courses to Know More</a>
+</div>
+
+</section>
+
+<!-----------------Campus---------------------->
+
+
+<section class="campus">
+    <h1>Courses</h1>
+    <p>You Can Learn Machine Learning, Web Designing, Electronics And Many Coding Languages Here</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="{{url_for('static', filename = 'assets/images/Machine-learning.jpg')}}">
+            <div class="layer">
+                <h3>PROGRAMMING</h3>
+            </div>
+        </div>
+
+
+        <div class="campus-col">
+            <img src="{{url_for('static', filename = 'assets/images/web-design.jpg')}}">
+            <div class="layer">
+                <h3>WEB DESIGNING</h3>
+            </div>
+        </div>
+
+
+        <div class="campus-col">
+            <img src="{{url_for('static', filename = 'assets/images/Electronics (1).jpg')}}">
+            <div class="layer">
+                <h3>ELECTRONICS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Call To Action -->
+
+<section class="cta">
+    <h1>Learn Course Online<br>Anywhere From The World</h1>
+    <a href="/course" class="hero-btn">COURSES</a>
+</section>
+{% endblock %}

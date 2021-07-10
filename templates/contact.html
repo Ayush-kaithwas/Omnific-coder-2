@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    /* --------------------------------Contact page------------------------------------ */
+
+    .sub-header {
+        height: 80vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../static/assets/images/contact.jpg');
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+
+    }
+
+    .contact-us {
+        width: 80%;
+        margin: auto;
+    }
+
+    .contact-col {
+        flex-basis: 48%;
+        margin-bottom: 30px;
+    }
+
+
+    .contact-col input,
+    .contact-col textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 17px;
+        outline: none;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+
+    .contact-col input:hover,
+    .contact-col textarea:hover {
+        border: 1px solid #187dff;
+
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 180px;
+    }
+
+    button {
+        width: 190px;
+        height: 56px;
+        border: 0;
+        outline: none;
+        background: #2f2f2f;
+        color: #fff;
+        font-size: 22px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #btnText {
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 16px;
+    }
+
+    .check-box {
+        width: 61px;
+        height: 61px;
+        border-radius: 40px;
+        box-shadow: 0 0 12px -2px rgb(0 0 0 / 50%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+    }
+
+    .check-box svg {
+        width: 38px;
+        margin: 9px;
+    }
+
+    svg path {
+        stroke-width: 3;
+        stroke: #fff;
+        stroke-dasharray: 34;
+        stroke-dashoffset: 34;
+        stroke-linecap: round;
+    }
+
+    .active {
+        background: #187dff;
+        ;
+        transition: 1s;
+    }
+
+    .active .check-box {
+        right: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .active p {
+        margin-right: 67px;
+        transition: 1s;
+        color: white;
+        font-size: 17px;
+        font-weight: 0;
+        line-height: 0;
+        padding: 0;
+    }
+
+    .active svg path {
+        stroke-dashoffset: 0;
+        transition: 1s;
+        transition-delay: 1s;
+    }
+
+    @media(max-width:700px) {
+        .sub-header h1 {
+            margin-top: 175px;
+
+        }
+    }
+</style>
+
+
+
+<!-- -------------------------------Contact Content------------------------ -->
+
+<h1>Contact Me</h1>
+</section>
+
+
+<!-- Contact Us -->
+
+<section class="contact-us">
+
+    <div class="row">
+        <div class="contact-col">
+            <form action="#" id="form" novalidate>
+                <input type="text" name="name" placeholder="Enter Your Name">
+                <input type="email" name="email" placeholder="Enter Your Email">
+                <input type="tel" name="phone" placeholder="Enter Your Phone Number">
+                <textarea rows="8" name="message" placeholder="Enter Your Message Here....."></textarea>
+                <button type="submit"  id="btn">
+                    <p id="btnText">Submit</p>
+                    <div class="check-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+</section>
+<script>
+    var btn = document.getElementById("btn");
+    var btnText = document.getElementById("btnText");
+
+    btn.onclick = function () {
+        btnText.innerHTML = "Submitted";
+        btn.classList.add("active");
+
+    }
+</script>
+
+{% endblock %}

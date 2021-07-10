@@ -1,16 +1,11 @@
 {
     "params":
     {
-        "local_server":"False",
         "fb_url":"https://facebook.com/omnific",
         "inta_url":"https://instagram.com/omni_fic",
         "git_url":"https://github.com/omnific",
         "blog_name":"Omnific",
-        "login_img":"logo3.png",
-        "admin_user":"Voldemort",
-        "admin_password":"tombriddle123",
-        "upload_location":"D:\\Desktop_Courses\\Omnific website\\static"
-
-        
+        "admin_user":"user",
+        "admin_password":"password",
     }
 }
